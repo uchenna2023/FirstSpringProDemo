@@ -53,7 +53,7 @@ public class GreetController {
     @GetMapping("/log")
     public int writeToLog(){
         while(prevCount < currentCount){
-            try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("src/main/java/com/Uchenna/FirstSpringProDemo/log.txt"))){
+            try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("src/main/java/com/Uchenna/FirstSpringProDemo/log.txt",true))){
                 bufferedWriter.write("New message created");
                 prevCount++;
             }
